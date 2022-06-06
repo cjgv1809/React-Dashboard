@@ -37,6 +37,7 @@ const Navbar = () => {
     handleClick,
     screenSize,
     setScreenSize,
+    currentColor,
   } = useStateContext();
 
   useEffect(() => {
@@ -57,7 +58,7 @@ const Navbar = () => {
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
         icon={<AiOutlineMenu />}
-        color="blue"
+        color={currentColor}
         title="Menu"
         onClick={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
       />
@@ -65,21 +66,21 @@ const Navbar = () => {
         <NavButton
           title="Cart"
           onClick={() => handleClick("cart")}
-          color="blue"
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title="Chat"
           onClick={() => handleClick("chat")}
           dotColor="#03C9D7"
-          color="blue"
+          color={currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title="Notifications"
           onClick={() => handleClick("notification")}
           dotColor="#03C9D7"
-          color="blue"
+          color={currentColor}
           icon={<RiNotification3Line />}
         />
         <TooltipComponent content="User Profile" position="BottomCenter">

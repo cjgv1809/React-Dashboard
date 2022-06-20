@@ -35,7 +35,7 @@ function App() {
   return (
     <div className={`${currentMode === "Dark" ? "dark" : "light"}`}>
       <BrowserRouter>
-        <div className="flex relative dark:bg-main-dark-bg">
+        <div className="flex relative dark:bg-main-dark-bg overflow-x-auto">
           <div className="fixed right-4 bottom-4 z-50">
             <TooltipComponent content="Settings" position="TopCenter">
               <button
@@ -96,6 +96,8 @@ function App() {
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
+
+              <Footer />
             </div>
           </div>
         </div>

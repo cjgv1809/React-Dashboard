@@ -13,7 +13,7 @@ const Ecommerce = () => {
   const { currentColor } = useStateContext();
 
   return (
-    <div className="mt-12">
+    <div className="m-4 md:m-10 mt-24">
       <div className="flex flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
@@ -32,11 +32,11 @@ const Ecommerce = () => {
             />
           </div>
         </div>
-        <div className="flex m-3 flex-wrap justify-between gap-4  items-center">
+        <div className="flex m-3 flex-wrap gap-4 items-center">
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-80 p-4 pt-9 rounded-2xl"
+              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg w-40 md:w-80 p-4 pt-9 rounded-2xl md:flex-1"
             >
               <button
                 type="button"
@@ -58,7 +58,7 @@ const Ecommerce = () => {
       </div>
 
       <div className="flex flex-wrap justify-center gap-10">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780 flex-1 md:max-w-3xl">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
